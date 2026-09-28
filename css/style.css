@@ -109,45 +109,74 @@ section {
   transform: translateY(-2px);
 }
 
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
 #mainNavbar {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: 100% !important;
-
-  min-height: 70px;
-  padding: 14px 0;
-
   background: rgba(7, 26, 51, 0.97);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  z-index: 1050 !important;
-
-  transition: background 0.3s ease;
+  padding: 14px 0;
+  transition: var(--transition);
+  z-index: 1000;
 }
 
-/* MOBILE NAVBAR */
-@media (max-width: 991px) {
-  #mainNavbar {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-
-    width: 100% !important;
-    min-height: 70px;
-
-    margin: 0 !important;
-    padding: 14px 0;
-
-    transform: none !important;
-    -webkit-transform: none !important;
-
-    z-index: 1050 !important;
-  }
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
 }
+
+.brand-main {
+  color: var(--white);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.brand-main span {
+  color: var(--gold);
+}
+
+.navbar-brand small {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.48rem;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+.navbar-nav {
+  gap: 8px;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 8px 12px !important;
+  position: relative;
+  transition: var(--transition);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--gold);
+}
+
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
 /* =========================================================
    HERO
    ========================================================= */

@@ -1,3 +1,17 @@
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.hero-section {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+.row {
+  max-width: 100%;
+}
 /* =========================================================
    MAKSOLUTIONS
    Main Stylesheet
